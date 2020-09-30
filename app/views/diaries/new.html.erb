@@ -9,6 +9,14 @@
    
    <%#エラーメッセージを入れる%>
 
+   <div class="img-upload">
+    <div class="click-upload">
+      <p>
+        画像アップロード
+      </p>
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+  　</div>
    <div class="diary-create-text">
    <%= f.text_area :text, class:"diary-text"%></div>
 
