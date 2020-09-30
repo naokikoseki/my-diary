@@ -1,29 +1,38 @@
-<h2>Sign up</h2>
+<div class="user-form">
+ <header class="header">Welcome to My Diary </header>
+ <h2 class="user-title">Sign up</h2>
+ 
+ <div class="user-main">
+  <%= form_with model:@user, url: user_registration_path, local: true do |f| %>
+   <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+   <div class="nickname">
+   <%= f.label :nickname, class:"form-name" %><br />
+   <%= f.text_area :nickname, class:"nickname-form"%>
+   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+   <div class="email">
+    <%= f.label :email, class:"form-name" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"login-form" %>
+   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+   <div class="password">
+    <%= f.label :password, class:"form-name" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <%= f.password_field :password, autocomplete: "new-password", class:"login-form" %>
+   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+   <div class="password">
+    <%= f.label :password_confirmation, class:"form-name" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"login-form" %>
+   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+   <div class="actions">
+    <%= f.submit "Sign up", class:"login-btn" %>
+   </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+ </div>
+</div>

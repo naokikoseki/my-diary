@@ -1,0 +1,9 @@
+.nickname-form{
+  height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
