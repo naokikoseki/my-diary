@@ -15,9 +15,10 @@
  <div class="main">
   <%= month_calendar(start_date_param: :my_date, events: @diaries) do |date, diaries| %>
    <%= date.day %>
-   <%= diaries.each do |diary| %>
+   <% diaries.each do |diary| %>
     <%= link_to diary_path(diary.id) do %>
-     <%= image_tag diary.image, class:"img" %>
+    <div>
+     <%= image_tag diary.image, class:"img" %></div>
     <% end %>
    <%end%>
   <% end %>

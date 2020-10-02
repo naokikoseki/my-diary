@@ -40,8 +40,8 @@
 
 /*トップページのカレンダー部分*/
 .main{
-  margin-top: 20px;
-  height: 90vh;
+  margin-top: 5vh;
+  height: 80vh;
 }
 .calendar-heading{
   text-align: center;
