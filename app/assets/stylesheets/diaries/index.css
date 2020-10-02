@@ -1,3 +1,63 @@
+/*トップページのヘッダー部分*/
+.diary-header{
+  height: 10vh;
+}
+.top-page-header{
+  background-color: aqua;
+  font-size: 50px;
+  width: 100vw;
+  text-align: center;
+}
+
+.header-lists{
+  display: flex;
+  padding: 0 10px;
+}
+.user-nickname{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+.logout{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+.chat-btn{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold
+}
+.commnication-btn{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold
+}
+
+/*トップページのカレンダー部分*/
 .main{
-  margin-top: 30px;
+  margin-top: 20px;
+  height: 90vh;
+}
+.calendar-heading{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.calender-link{
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  padding: 10px;
+}
+.calendar-title{
+  font-size: 25px;
+}
+
+.img{
+  width: 10vw;
+  height: 10vh;
 }

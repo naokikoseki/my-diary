@@ -1,11 +1,25 @@
 <div class="diary-contents">
- <header class="diary-create-header">
-  <h1>My Diary</h1>
+ <header class="diary-header">
+  <h1 class="top-page-header">My Diary</h1>
+   <ul class='header-lists'>
+      <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, "#", class: "user-nickname"  %></li> 
+      <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <li class="chat-btn">chat room</li>
+      <li class="commnication-btn">communication</li>
+      <% else %>
+      <% end %>
+    </ul>
  </header>
 
  <div class="main">
-  <%= month_calendar do |date| %>
-  <%= date %>
+  <%= month_calendar(start_date_param: :my_date, events: @diaries) do |date, diaries| %>
+   <%= date.day %>
+   <%= diaries.each do |diary| %>
+    <%= link_to diary_path(diary.id) do %>
+     <%= image_tag diary.image, class:"img" %>
+    <% end %>
+   <%end%>
   <% end %>
  </div>
 </div>
