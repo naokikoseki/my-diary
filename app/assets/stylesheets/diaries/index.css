@@ -37,11 +37,17 @@
   color: #333333;
   font-weight: bold
 }
+.create-btn{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold
+}
 
 /*トップページのカレンダー部分*/
 .main{
-  margin-top: 5vh;
-  height: 80vh;
+  margin-top: 3vh;
+  height: 70vh;
 }
 .calendar-heading{
   text-align: center;
@@ -58,6 +64,6 @@
 }
 
 .img{
-  width: 10vw;
-  height: 10vh;
+  width: 9vw;
+  height: 9vh;
 }
