@@ -19,7 +19,12 @@
    <% if current_user.id == diary.user_id %>
     <%= link_to diary_path(diary.id) do %>
     <div>
-     <%= image_tag diary.image, class:"img" %></div>
+    <% if diary.image.present? %>
+     <%= image_tag diary.image, class:"img" %>
+    <% else %>
+     <%= image_tag "no_image_white.jpeg", class:"img" %>
+    <% end %>
+     </div>
     <% end %>
    <% end %>
    <% end %>
