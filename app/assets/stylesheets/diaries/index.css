@@ -1,3 +1,8 @@
+.diary-contents{
+  background-image: url("../sample6.jpeg");
+  height: 100vh;
+  width: 100vw;
+}
 /*トップページのヘッダー部分*/
 .diary-header{
   height: 10vh;
