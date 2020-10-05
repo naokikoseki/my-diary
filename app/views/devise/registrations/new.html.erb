@@ -1,8 +1,9 @@
 <div class="user-form">
  <header class="header">Welcome to My Diary </header>
- <h2 class="user-title">Sign up</h2>
- 
+
  <div class="user-main">
+  <h2 class="signup-title">Sign up</h2>
+ 
   <%= form_with model:@user, url: user_registration_path, local: true do |f| %>
    <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -11,12 +12,12 @@
    <%= f.text_area :nickname, class:"nickname-form"%>
    </div>
 
-   <div class="email">
+   <div class="email-login">
     <%= f.label :email, class:"form-name" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"login-form" %>
    </div>
 
-   <div class="password">
+   <div class="password-login">
     <%= f.label :password, class:"form-name" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -24,12 +25,12 @@
     <%= f.password_field :password, autocomplete: "new-password", class:"login-form" %>
    </div>
 
-   <div class="password">
+   <div class="password-login">
     <%= f.label :password_confirmation, class:"form-name" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"login-form" %>
    </div>
 
-   <div class="actions">
+   <div class="signup-actions">
     <%= f.submit "Sign up", class:"login-btn" %>
    </div>
   <% end %>

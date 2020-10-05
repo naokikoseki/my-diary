@@ -1,10 +1,12 @@
 .diary-create-contents{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   display: flex;
   background-image: url("../sample6.jpeg");
   align-items: center;
   flex-direction: column;
   width:100vw;
   height:100vh;
+  text-align: center;
 }
 
 .diary-create-header{
@@ -19,37 +21,50 @@
   width: 100vw;
   height: 80vh;
   text-align: center;
-  margin: 50px 0 0 0;
+  margin-top: 3vh;
 }
 .diary-create-title{
   font-size: 25px;
+  font-weight: bolder;
 }
 .img-upload{
   padding: 5px;
   display: flex;
   justify-content: center;
+  margin: 1vh;
 }
 .preview{
   width: 9vw;
   height: 9vh;
 }
 .diary-text{
+  font-family: 'Noto Serif JP', sans-serif;
+  border: solid 1px rgb(206, 206, 206);
+  border-radius: 1vh;
   width: 70vw;
   height: 50vh;
   padding: 5px;
+  margin: 1vh;
 }
 .diary-create-bottun{
   text-align: center;
 }
 .bottun{
-  background-color: #a0faff;
-  border: 1px solid #a0faff;
-  padding: 5px
+  text-decoration: none;
+  border-radius: 100vh;
+  background-color: papayawhip;
+  border: 2px solid wheat;
+  color: #616161;
+  padding: 0.7vh 1vw;
 }
-
-.diary-create-footer{
-  background-color: #a0faff;
-  width: 100vw;
-  height: 10vh;
-  text-align: center;
+.submit-bottun{
+  text-decoration: none;
+  border-radius: 100vh;
+  background-color: papayawhip;
+  border: 2px solid wheat;
+  color: #616161;
+  padding: 0.3vh 0.8vw;
+}
+.to-toppage{
+  margin-top: 1.5vh;
 }

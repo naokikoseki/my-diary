@@ -1,9 +1,23 @@
+.signup-title{
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 2vh 0;
+  margin-bottom: 1vh;
+}
+
+
 .nickname-form{
+  width: 20vw;
+  margin-top: 5px;
   height: 30px;
-  padding: 10px 16px 8px;
+  padding: 3px 10px;
   border-radius: 4px;
-  border: 1px solid;
+  border: 1px solid black;
   background: #fff;
   font-size: 16px;
   resize: none;
+}
+
+.signup-actions{
+  margin: 2vh;
 }

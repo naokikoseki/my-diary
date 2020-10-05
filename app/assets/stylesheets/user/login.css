@@ -1,40 +1,49 @@
 .user-form{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   text-align: center;
+  height: 100vh;
 }
 
 .header{
   font-size: 50px;
+  font-weight: bold;
   background-color: #a0faff;
   height: 10vh;
 }
 .user-main{
-  /*background-image: url(../sample4.jpeg);*/
-  height: 70vh;
+  background-image: url(../sample6.jpeg);
+  height: 90vh;
 }
-.user-title{
+.login-title{
   font-size: 40px;
+  font-weight: bolder;
   height: 10vh;
   padding: 30px 0 0 0;
 }
+.email{
+  margin-top: 3vh;
+  height: 20vh;
+}
 
 .form-name{
-  font-size: 35px;
+  font-size: 30px;
   border: 20px 0;
-
 }
 
 .login-form{
   padding: 5px 10px;
   margin: 15px 0;
+  width: 20vw;
 }
 
 .field{
   margin: 15px;
 }
-.actions{
-  margin: 20px;
+.login-actions{
+  margin: 5vh;
 }
 .login-btn{
+  border-radius: 100vh;
   padding: 5px 10px;
   border: solid 1px #a0faff;
   background-color: #a0faff;

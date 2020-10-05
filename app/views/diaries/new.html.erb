@@ -1,6 +1,6 @@
 <div class="diary-create-contents">
  <header class="diary-create-header">
-  <h1>My Diary</h1>
+  <h1 class="top-page-header">My Diary</h1>
  </header>
  
  <div class="diary-create-main">
@@ -14,16 +14,18 @@
       <p>
         画像アップロード
       </p>
-      <%= f.file_field :image, id:"diary-image" %></div>
-      <div id="image-lists"></div>
-  　</div>
+      <%= f.file_field :image, id:"diary-image" %>
+    </div>
+    <div id="image-lists"></div>
+   </div>
    <div class="diary-create-text">
    <%= f.text_area :content, class:"diary-text" %></div>
 
    <div class="diary-create-bottun">
-   <%= f.submit "保存する", class:"bottun" %>
+   <%= f.submit "保存する", class:"submit-bottun" %>
    <%= f.date_select :start_time, class:"bottun" %>
    </div>
+   <div class="to-toppage"><%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %></div>
   <% end %>
  </div>
 

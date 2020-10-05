@@ -1,0 +1,39 @@
+.diary-show-main{
+  height: 80vh;
+  padding-top: 2vh;
+}
+.diary-show-title{
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 1.5vh;
+}
+.show-text{
+  font-family: 'Noto Serif JP', sans-serif;
+  border: solid 1px #616161;
+  border-radius: 1vh;
+  width: 70vw;
+  height: 50vh;
+  padding: 5px;
+  margin: 2.5vh;
+  text-align: left;
+}
+
+.diary-show-footer{
+  font-size: large;
+  font-weight: bolder;
+  height: 10vh;
+}
+.sns-t{
+  text-decoration: none;
+  padding: 0.5vh 3vw;
+  color: rgb(96, 194, 233);
+  border: solid 1.5px rgb(96, 194, 233);
+  border-radius: 1vh;
+}
+.sns-l{
+  text-decoration: none;
+  padding: 0.5vh 4vw;
+  color: rgb(108, 237, 108);
+  border: solid 1.5px rgb(108, 237, 108);
+  border-radius: 1vh;
+}
