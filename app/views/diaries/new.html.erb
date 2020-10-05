@@ -14,15 +14,15 @@
       <p>
         画像アップロード
       </p>
-      <%= f.file_field :image, id:"item-image" %>
-    </div>
+      <%= f.file_field :image, id:"diary-image" %></div>
+      <div id="image-lists"></div>
   　</div>
    <div class="diary-create-text">
-   <%= f.text_area :content, class:"diary-text"%></div>
+   <%= f.text_area :content, class:"diary-text" %></div>
 
    <div class="diary-create-bottun">
-   <%= f.submit "保存する", class:"bottun"%>
-   <%= f.date_select :start_time %>
+   <%= f.submit "保存する", class:"bottun" %>
+   <%= f.date_select :start_time, class:"bottun" %>
    </div>
   <% end %>
  </div>

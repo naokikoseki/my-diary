@@ -4,7 +4,7 @@
 
 .header{
   font-size: 50px;
-  background-color: aqua;
+  background-color: #a0faff;
   height: 10vh;
 }
 .user-main{
@@ -36,8 +36,8 @@
 }
 .login-btn{
   padding: 5px 10px;
-  border: solid 1px aqua;
-  background-color: aqua;
+  border: solid 1px #a0faff;
+  background-color: #a0faff;
 }
 .footer{
   height: 20vh;

@@ -8,7 +8,7 @@
 }
 
 .diary-create-header{
-  background-color: aqua;
+  background-color: #a0faff;
   font-size: 50px;
   width: 100vw;
   height: 10vh;
@@ -26,6 +26,12 @@
 }
 .img-upload{
   padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+.preview{
+  width: 9vw;
+  height: 9vh;
 }
 .diary-text{
   width: 70vw;
@@ -36,13 +42,13 @@
   text-align: center;
 }
 .bottun{
-  background-color: aqua;
-  border: 1px solid aqua;
+  background-color: #a0faff;
+  border: 1px solid #a0faff;
   padding: 5px
 }
 
 .diary-create-footer{
-  background-color: aqua;
+  background-color: #a0faff;
   width: 100vw;
   height: 10vh;
   text-align: center;
