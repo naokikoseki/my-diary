@@ -39,6 +39,7 @@
 }
 .diary-text{
   font-family: 'Noto Serif JP', sans-serif;
+  background-color: whitesmoke;
   border: solid 1px rgb(206, 206, 206);
   border-radius: 1vh;
   width: 70vw;

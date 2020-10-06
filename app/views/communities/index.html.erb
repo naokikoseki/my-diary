@@ -1,0 +1,15 @@
+<div class="community">
+ <header>
+  <h1 class="top-page-header">My Diary</h1>
+  <ul class='header-lists'>
+      <% if user_signed_in? %>
+      <li class="user-nickname"><%= current_user.nickname %></li> 
+      <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <%#<li class="chat-btn">chat room</li>%>
+      <li><%= link_to 'my page', root_path, class:"community-btn"%></li>
+      <li><%= link_to 'new diary', new_diary_path, class:"create-btn" %></li>
+      <% end %>
+  </ul>
+ </header>
+
+</div>
