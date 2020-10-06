@@ -1,0 +1,15 @@
+.diary-contents{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-image: url("../sample6.jpeg");
+  height: 100vh;
+  width: 100vw;
+}
+.community-main{
+  height: 80vh;
+  padding-top: 2vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

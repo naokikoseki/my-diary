@@ -6,7 +6,7 @@
       <li class="user-nickname"><%= current_user.nickname %></li> 
       <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <%#<li class="chat-btn">chat room</li>%>
-      <li><%= link_to 'community', communities_path, class:"community-btn"%></li>
+      <li><%= link_to 'community', 'diaries/community', class:"community-btn"%></li>
       <li><%= link_to 'new diary', new_diary_path, class:"create-btn" %></li>
       <% end %>
     </ul>

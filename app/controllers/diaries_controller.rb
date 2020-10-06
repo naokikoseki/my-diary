@@ -40,6 +40,11 @@ class DiariesController < ApplicationController
     end
   end
 
+  def community
+    @diaries = Diary.all
+    render 'community'
+  end
+
   private
   def diary_params
     params.require(:diary).permit(:image, :content, :start_time).merge(user_id: current_user.id)
