@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_063135) do
+ActiveRecord::Schema.define(version: 2020_10_02_110443) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,14 +33,8 @@ ActiveRecord::Schema.define(version: 2020_10_06_063135) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "communities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "diary_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["diary_id"], name: "index_communities_on_diary_id"
-  end
-
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
     t.text "content", null: false
     t.date "start_time", null: false
     t.bigint "user_id", null: false
@@ -63,6 +57,5 @@ ActiveRecord::Schema.define(version: 2020_10_06_063135) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "communities", "diaries"
   add_foreign_key "diaries", "users"
 end

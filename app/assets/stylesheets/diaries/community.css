@@ -7,4 +7,9 @@
 .community-main{
   height: 80vh;
   padding-top: 2vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

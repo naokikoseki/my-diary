@@ -16,6 +16,7 @@
   <% @diaries.each do |diary| %>
    <%= image_tag diary.image, class:"img"%>
    <%= diary.content %>
+   <%= diary.user.nickname %>
    <%= diary.start_time %>
   <% end %>
  </div>
