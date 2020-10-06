@@ -20,12 +20,12 @@
     </div>
    </div>
 
-   <%= f.text_area :title, class:"diary-title" %>
+   <%= f.text_area :title, placeholder:"タイトル", class:"diary-title" %>
    <div class="diary-create-text">
-   <%= f.text_area :content, class:"diary-text" %></div>
+   <%= f.text_area :content, placeholder:"本文", class:"diary-text" %></div>
 
    <div class="diary-create-bottun">
-   <%= check_box "open", "bottun"%>日記を公開する
+   
    <%= f.submit "保存する", class:"submit-bottun" %>
    <%= f.date_select :start_time, class:"bottun" %>
    </div>
