@@ -14,8 +14,14 @@
 
  <div class="community-main">
   <% @diaries.each do |diary| %>
-   <%= image_tag diary.image, class:"img"%>
-   <%= diary.content %>
+   <% if diary.images.present? %>
+     <% diary.images.first(1).each do |image| %>
+     <%= image_tag image, class:'img' %>
+    <% end %>
+    <% else %>
+     <%= image_tag "no_image_white.jpeg", class:"img" %>
+    <% end %>
+   <%= diary.title %>
    <%= diary.user.nickname %>
    <%= diary.start_time %>
   <% end %>

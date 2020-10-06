@@ -14,10 +14,13 @@
       <p>
         画像アップロード
       </p>
-      <%= f.file_field :image, id:"diary-image" %>
+      <%= f.file_field :images, name: 'diary[images][]', id: 'diary-image' %>
     </div>
-    <div id="image-lists"></div>
+    <div id="image-lists">
+    </div>
    </div>
+
+   <%= f.text_area :title, class:"diary-title" %>
    <div class="diary-create-text">
    <%= f.text_area :content, class:"diary-text" %></div>
 

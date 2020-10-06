@@ -7,11 +7,14 @@
  <div class="diary-show-main">
   <p class="diary-show-title"><%= @diary.start_time %>の日記</p> <%#仮のタイトル%>
    <div>
-   <% if @diary.image.present?%>
-   <%= image_tag @diary.image, class:"img" %>
+   <% if @diary.images.present? %>
+    <% @diary.images.each do |image| %>
+    <%= image_tag image, class:'img' %>
+    <% end %>
    <% end %>
    </div>
-
+   
+   <%= @diary.title %>
    <div class="show-text">
    <%= @diary.content %></div>
    <div class="show-bottun">
