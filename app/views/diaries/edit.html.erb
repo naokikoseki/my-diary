@@ -24,7 +24,7 @@
    <%= f.text_area :content, class:"diary-text"%></div>
 
    <div class="diary-create-bottun">
-   
+   <%= f.check_box :open %>日記を公開する
    <%= f.submit "保存する", class:"submit-bottun"%>
    <%= f.date_select :start_time %>
    </div>
