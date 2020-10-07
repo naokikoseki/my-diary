@@ -1,10 +1,10 @@
 .community-main{
   height: 80vh;
   margin-top: 5vh;
+  overflow-y: scroll;
 }
 
 .diary-lists{
-  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
