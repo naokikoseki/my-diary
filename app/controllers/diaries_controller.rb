@@ -41,7 +41,7 @@ class DiariesController < ApplicationController
   end
 
   def community
-    @diaries = Diary.all
+    @diaries = Diary.all.order("start_time DESC")
     render 'community'
   end
 
