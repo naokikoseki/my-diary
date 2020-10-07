@@ -1,6 +1,7 @@
 .community-main{
   height: 80vh;
-  margin-top: 5vh;
+  margin-top: 1vh 0;
+  padding-left: 0.5vw;
   overflow-y: scroll;
 }
 
@@ -13,8 +14,10 @@
   height: 27vh;
   margin: 2vh 2.3vw;
   text-align: center;
+  box-shadow: 0 20px 40px rgb(92, 92, 92);
 }
 .community-image{
   height: 15vh;
   width: 15vw;
+  box-shadow: 0 20px 40px wheat;
 }

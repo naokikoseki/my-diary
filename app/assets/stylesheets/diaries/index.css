@@ -54,7 +54,7 @@
 /*トップページのカレンダー部分*/
 .main{
   margin-top: 3vh;
-  height: 70vh;
+  height: 87vh;
   overflow-y: scroll;
 }
 .calendar-heading{
@@ -74,4 +74,5 @@
 .img{
   height: 9vh;
   width: 9vw;
+  border: solid 1px black;
 }

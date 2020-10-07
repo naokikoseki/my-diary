@@ -67,6 +67,7 @@
   height: 3vh;
   padding: 5px;
   resize: none;
+  box-shadow: 0 15px 30px rgb(201, 201, 201);
 }
 .diary-text{
   font-family: 'Noto Serif JP', sans-serif;
@@ -78,6 +79,7 @@
   padding: 5px;
   margin: 1vh;
   resize: none;
+  box-shadow: 0 20px 40px rgb(201, 201, 201);
 }
 .diary-create-bottun{
   text-align: center;
@@ -89,12 +91,14 @@
   border: 2px solid wheat;
   color: #616161;
   padding: 0.7vh 1vw;
+  box-shadow: 0 5px 5px wheat;
 }
 .submit-bottun{
   text-decoration: none;
   border-radius: 100vh;
   background-color: papayawhip;
   border: 2px solid wheat;
+  box-shadow: 0 5px 5px wheat;
   color: #616161;
   padding: 0.3vh 0.8vw;
 }

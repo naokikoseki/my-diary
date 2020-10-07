@@ -1,5 +1,5 @@
 .diary-show-main{
-  height: 80vh;
+  height: 87vh;
   padding-top: 2vh;
 }
 .diary-show-title{
@@ -15,6 +15,7 @@
   text-align: left;
   margin: 0.5vh 1.5vw;
   padding: 5px;
+  box-shadow: 0 20px 40px rgb(201, 201, 201);
 }
 .show-image{
   flex-wrap: wrap;
@@ -30,6 +31,7 @@
   padding: 5px;
   margin: 2.5vh;
   text-align: left;
+  box-shadow: 0 20px 40px rgb(199, 199, 199);
 }
 
 .diary-show-footer{
@@ -43,6 +45,8 @@
   color: rgb(96, 194, 233);
   border: solid 1.5px rgb(96, 194, 233);
   border-radius: 1vh;
+  box-shadow: 0 5px 5px rgb(96, 194, 233);
+  margin-right: 3vw;
 }
 .sns-l{
   text-decoration: none;
@@ -50,4 +54,5 @@
   color: rgb(108, 237, 108);
   border: solid 1.5px rgb(108, 237, 108);
   border-radius: 1vh;
+  box-shadow: 0 5px 5px rgb(108, 237, 108);
 }
