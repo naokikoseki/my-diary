@@ -1,39 +1,48 @@
 <div class="diary-create-contents">
  <header class="diary-create-header">
-  <h1 class="top-page-header">My Diary</h1>
+  <p class="top-page-header">My Diary</p>
  </header>
  
  <div class="diary-create-main">
-  <h2 class="diary-create-title">今日あった出来事を書こう！</h2> <%#仮のタイトル%>
-  <%= form_with(model:@diary, local: true) do |f|%>
+   <h1 class="diary-create-title">今日あった出来事を書こう！</h1>
+
+    <%= form_with(model:@diary, local: true) do |f|%>
    
-   <%#エラーメッセージを入れる%>
+     <%#エラーメッセージを入れる%>
 
-   <div class="img-upload">
-    <div class="click-upload">
-      <p>
-        画像アップロード
-      </p>
-      <%= f.file_field :images, name: 'diary[images][]', id: 'diary-image' %>
-    </div>
-    <div id="image-lists">
-    </div>
-   </div>
+     <div class="img-upload">
 
-   <%= f.text_area :title, placeholder:"タイトル", class:"diary-title" %>
-   <div class="diary-create-text">
-   <%= f.text_area :content, placeholder:"本文", class:"diary-text" %></div>
+      <div class="click-upload">
+       <h2>画像アップロード</h2>
+       <%= f.file_field :images, name: 'diary[images][]', id: 'diary-image' %>
+      </div>
 
-   <div class="diary-create-bottun">
-   <%= f.check_box :open %>日記を公開する
-   <%= f.submit "保存する", class:"submit-bottun" %>
-   <%= f.date_select :start_time, class:"bottun" %>
-   </div>
-   <div class="to-toppage"><%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %></div>
-  <% end %>
+      <div id="image-lists">
+      </div>
+
+     </div>
+     
+     <div>
+      <%= f.text_area :title, placeholder:"タイトル", class:"diary-title" %>
+     </div>
+
+     <div class="diary-create-text">
+      <%= f.text_area :content, placeholder:"本文", class:"diary-text" %>
+     </div>
+
+     <div class="diary-create-bottun">
+      <%= f.check_box :open %>日記を公開する
+      <%= f.submit "保存する", class:"submit-bottun" %>
+      <%= f.date_select :start_time, class:"bottun" %>
+     </div>
+
+     <div class="to-toppage">
+      <%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %>
+     </div>
+    <% end %>
  </div>
 
-  <footer class="diary-create-footer">
+ <footer class="diary-create-footer">
   
-  </footer>
+ </footer>
 </div>

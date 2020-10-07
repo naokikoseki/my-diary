@@ -1,29 +1,64 @@
 <div class="diary-contents">
+
  <header class="diary-header">
-  <h1 class="top-page-header">My Diary</h1>
+  <p class="top-page-header">My Diary</p>
    <ul class='header-lists'>
-      <% if user_signed_in? %>
+     <% if user_signed_in? %>
       <li class="user-nickname"><%= current_user.nickname %></li> 
       <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <%#<li class="chat-btn">chat room</li>%>
       <li><%= link_to 'my page', root_path, class:"community-btn"%></li>
       <li><%= link_to 'new diary', new_diary_path, class:"create-btn" %></li>
-      <% end %>
+     <% end %>
     </ul>
  </header>
 
  <div class="community-main">
-  <% @diaries.each do |diary| %>
-   <% if diary.images.present? %>
+
+  <ul class="diary-lists">
+   <%# 公開されている日記の一覧表示 %>
+   <% @diaries.each do |diary| %>
+    <%# 画像の有無の条件分岐 %>
+    <% if (diary.open == "1") && diary.images.present? %>
+
+     <%# 保存されている画像の一枚表示 %>
      <% diary.images.first(1).each do |image| %>
-     <%= image_tag image, class:'img' %>
+       <li class="list">
+
+         <%= link_to diary_path(diary.id) do%>
+          <div class="community-img-content">
+           <%= image_tag image, class:"community-image" %>
+          </div>
+         <% end %>
+
+         <div class="community-diary-info">
+          <h1><%= diary.title %></h1>
+          <h2><%= diary.user.nickname %></h2>
+          <h3><%= diary.start_time %></h3>
+         </div>
+       </li>
+     <% end %>
+     <%# 保存されている画像の一枚表示 %>
+     
+    <% elsif (diary.open == "1") && !(diary.images.present?) %>
+       <li class="list">
+
+         <%= link_to diary_path(diary.id) do%>
+          <div class="community-img-content">
+           <%= image_tag 'no_image_white.jpg', class:"community-image"%>
+          </div>
+         <% end %>
+
+         <div class="community-diary-info">
+          <h1><%= diary.title %></h1>
+          <h2><%= diary.user.nickname %></h2>
+          <h3><%= diary.start_time %></h3>
+         </div>
+       </li>
     <% end %>
-    <% else %>
-     <%= image_tag "no_image_white.jpeg", class:"img" %>
-    <% end %>
-   <%= diary.title %>
-   <%= diary.user.nickname %>
-   <%= diary.start_time %>
-  <% end %>
+    <%# 画像の有無の条件分岐 %>
+   <% end %>
+   <%# 公開されている日記の一覧表示 %>
+  </ul>
  </div>
 </div>

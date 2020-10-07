@@ -1,36 +1,46 @@
+<% if user_signed_in? %>
 <div class="diary-contents">
  <header class="diary-header">
   <h1 class="top-page-header">My Diary</h1>
    <ul class='header-lists'>
-      <% if user_signed_in? %>
       <li class="user-nickname"><%= current_user.nickname %></li> 
       <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <%#<li class="chat-btn">chat room</li>%>
       <li><%= link_to 'community', 'diaries/community', class:"community-btn"%></li>
       <li><%= link_to 'new diary', new_diary_path, class:"create-btn" %></li>
-      <% end %>
     </ul>
  </header>
 
  <div class="main">
+ <%# カレンダーの表示 %>
   <%= month_calendar(start_date_param: :my_date, events: @diaries) do |date, diaries| %>
    <%= date.day %>
-   <% diaries.each do |diary| %>
-   <% if current_user.id == diary.user_id %>
-    <%= link_to diary_path(diary.id) do %>
-    <div>
-    <% if diary.images.present? %>
-     <% diary.images.first(1).each do |image| %>
-     <%= image_tag image, class:'img' %>
-    <% end %>
-    <% else %>
-     <%= image_tag "no_image_white.jpeg", class:"img" %>
-    <% end %>
+   <%# 自分の書いた日記を表示させる処理 %>
+   <% diaries.first(1).each do |diary| %>
+    <% if current_user.id == diary.user_id %>
+     <%# 詳細画面へのリンク %>
+     <%= link_to diary_path(diary.id) do %>
+     <div>
+      <%# 日記の添付画像か、添付されていない場合はサンプル画像を表示 %>
+      <% if diary.images.present? %>
+
+       <% diary.images.first(1).each do |image| %>
+       <%= image_tag image, class:'img' %>
+       <% end %>
+
+      <% else %>
+       <%= image_tag "no_image_white.jpeg", class:"img" %>
+      <% end %>
+      <%# 日記の添付画像か、添付されていない場合はサンプル画像を表示 %>
      </div>
+     <% end %>
+     <%# 詳細画面へのリンク %>
     <% end %>
    <% end %>
-   <% end %>
+   <%# 自分の書いた日記を表示させる処理 %>
+
   <% end %>
+  <%# カレンダーの表示 %>
  </div>
 </div>
-
+<% end %>
