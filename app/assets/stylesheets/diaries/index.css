@@ -55,6 +55,7 @@
 .main{
   margin-top: 3vh;
   height: 70vh;
+  overflow-y: scroll;
 }
 .calendar-heading{
   text-align: center;

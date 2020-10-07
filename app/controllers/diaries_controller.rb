@@ -45,6 +45,10 @@ class DiariesController < ApplicationController
     render 'community'
   end
 
+  def search
+    @diaries = Diary.search(params[:keyword])
+  end
+
   private
   def diary_params
     params.require(:diary).permit(:title, :content, :start_time, :open, images: []).merge(user_id: current_user.id)

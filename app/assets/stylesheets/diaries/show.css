@@ -16,6 +16,10 @@
   margin: 0.5vh 1.5vw;
   padding: 5px;
 }
+.show-image{
+  flex-wrap: wrap;
+  text-align: center;
+}
 .show-text{
   font-family: 'Noto Serif JP', sans-serif;
   border: solid 1px #616161;

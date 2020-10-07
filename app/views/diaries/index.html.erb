@@ -15,9 +15,9 @@
  <%# カレンダーの表示 %>
   <%= month_calendar(start_date_param: :my_date, events: @diaries) do |date, diaries| %>
    <%= date.day %>
-   
+
    <%# 自分の書いた日記を表示させる処理 %>
-   <% diaries.first(1).each do |diary| %>
+   <% diaries.each do |diary| %>
     <% if current_user.id == diary.user_id %>
 
      <%# 詳細画面へのリンク %>
