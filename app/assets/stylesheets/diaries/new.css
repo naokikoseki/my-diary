@@ -19,9 +19,10 @@
 
 .diary-create-main{
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
   text-align: center;
-  margin-top: 3vh;
+  margin-top: 2vh;
+  overflow-y: scroll;
 }
 .diary-create-title{
   font-size: 25px;
@@ -31,6 +32,27 @@
   display: flex;
   justify-content: center;
   margin: 1vh;
+}
+.create-image-lists{
+  width: 70vw;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 4px;
+  padding: 4px;
+}
+.sample{
+  padding: 10vh 70vw;
+}
+.image-input{
+  display: none;
+}
+.diary-create-image{
+  display: flex;
+  justify-content: left;
+}
+.image-element{
+  padding-right: 5px;
 }
 .preview{
   width: 9vw;

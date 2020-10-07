@@ -1,0 +1,19 @@
+.search-form{
+  text-align: center;
+}
+.search-input{
+  margin-bottom: 1vh;
+  width: 20vw;
+  text-decoration: none;
+  padding: 1vh 1vw;
+  border: solid 1px rgb(218, 187, 130);
+  border-radius: 1vh;
+}
+.search-btn{
+  text-decoration: none;
+  border-radius: 100vh;
+  background-color: rgb(250, 245, 234);
+  border: 2px solid wheat;
+  color: #616161;
+  padding: 0.7vh 1vw;
+}

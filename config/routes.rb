@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :diaries do
    collection do
     get 'community'
+    get 'search'
    end
   end
 end
