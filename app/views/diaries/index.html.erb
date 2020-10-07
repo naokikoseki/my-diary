@@ -15,11 +15,14 @@
  <%# カレンダーの表示 %>
   <%= month_calendar(start_date_param: :my_date, events: @diaries) do |date, diaries| %>
    <%= date.day %>
+   
    <%# 自分の書いた日記を表示させる処理 %>
    <% diaries.first(1).each do |diary| %>
     <% if current_user.id == diary.user_id %>
+
      <%# 詳細画面へのリンク %>
      <%= link_to diary_path(diary.id) do %>
+
      <div>
       <%# 日記の添付画像か、添付されていない場合はサンプル画像を表示 %>
       <% if diary.images.present? %>
@@ -33,8 +36,10 @@
       <% end %>
       <%# 日記の添付画像か、添付されていない場合はサンプル画像を表示 %>
      </div>
+
      <% end %>
      <%# 詳細画面へのリンク %>
+
     <% end %>
    <% end %>
    <%# 自分の書いた日記を表示させる処理 %>
