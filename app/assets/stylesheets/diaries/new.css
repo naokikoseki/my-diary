@@ -1,7 +1,7 @@
 .diary-create-contents{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   display: flex;
-  background-image: url("../sample6.jpeg");
+  background-color: rgb(250, 245, 234);
   align-items: center;
   flex-direction: column;
   width:100vw;
@@ -42,8 +42,9 @@
   border: solid 1px rgb(206, 206, 206);
   border-radius: 1vh;
   width: 70vw;
-  height: 2vh;
+  height: 3vh;
   padding: 5px;
+  resize: none;
 }
 .diary-text{
   font-family: 'Noto Serif JP', sans-serif;
@@ -54,6 +55,7 @@
   height: 40vh;
   padding: 5px;
   margin: 1vh;
+  resize: none;
 }
 .diary-create-bottun{
   text-align: center;

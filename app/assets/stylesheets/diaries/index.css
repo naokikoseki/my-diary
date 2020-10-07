@@ -1,6 +1,6 @@
 .diary-contents{
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  background-image: url("../sample6.jpeg");
+  background-color: rgb(250, 245, 234);
   height: 100vh;
   width: 100vw;
 }
@@ -71,6 +71,6 @@
 }
 
 .img{
-  width: 9vw;
   height: 9vh;
+  width: 9vw;
 }

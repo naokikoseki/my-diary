@@ -1,34 +1,43 @@
-<% if current_user.id == @diary.user_id%>
 <div class="diary-create-contents">
  <header class="diary-create-header">
   <h1 class="top-page-header">My Diary</h1>
  </header>
  
  <div class="diary-show-main">
-  <p class="diary-show-title"><%= @diary.start_time %>の日記</p> <%#仮のタイトル%>
-   <div>
-   <% if @diary.images.present? %>
-    <% @diary.images.each do |image| %>
-    <%= image_tag image, class:'img' %>
-    <% end %>
-   <% end %>
-   </div>
+   <p class="diary-show-title"><%= @diary.start_time %>の日記</p> <%#仮のタイトル%>
+    <div>
+     <% if @diary.images.present? %>
+
+      <% @diary.images.each do |image| %>
+       <%= image_tag image, class:'img' %>
+      <% end %>
+
+     <% end %>
+    </div>
    
-   <%= @diary.title %>
-   <div class="show-text">
-   <%= @diary.content %></div>
-   <div class="show-bottun">
-   <%= link_to '編集', edit_diary_path, method: :get, class: "bottun" %>
-   <%= link_to '削除', diary_path(@diary.id), method: :delete, class:"bottun" %>
-   <%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %>
+   <div class="show-title">
+    <%= @diary.title %>
    </div>
+
+   <div class="show-text">
+    <%= @diary.content %>
+   </div>
+
+   <div class="show-bottun">
+    <% if current_user.id == @diary.user.id%>
+     <%= link_to '編集', edit_diary_path, method: :get, class: "bottun" %>
+     <%= link_to '削除', diary_path(@diary.id), method: :delete, class:"bottun" %>
+     <%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %>
+    <% else %>
+     <%= link_to '一覧に戻る', 'community', class:"bottun" %>
+    <% end %>
+   </div>
+
  </div>
 
  <footer class="diary-show-footer">
   <%= link_to 'Twitter','https://twitter.com/share?url=#{request.url}', class:"sns-t" %>
   <%= link_to 'LINE', 'https://line.me/R/msg/text/?#{request.url}', class:"sns-l" %>
  </footer>
+ 
 </div>
-<% else %>
-<%= link_to 'トップページへ', root_path, method: :get, class:"bottun" %>
-<% end %>
