@@ -27,9 +27,9 @@
     <% if current_user.id == @diary.user.id%>
      <%= link_to '編集', edit_diary_path, method: :get, class: "bottun" %>
      <%= link_to '削除', diary_path(@diary.id), method: :delete, class:"bottun" %>
-     <%= link_to 'トップページに戻る', root_path, method: :get, class:"bottun" %>
+     <%= link_to 'トップページに戻る', 'javascript:history.back()', class:"bottun" %>
     <% else %>
-     <%= link_to '一覧に戻る', 'community', class:"bottun" %>
+     <%= link_to '一覧に戻る', 'javascript:history.back()', class:"bottun" %>
     <% end %>
    </div>
 

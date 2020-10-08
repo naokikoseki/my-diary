@@ -9,7 +9,7 @@
   height: 10vh;
 }
 .top-page-header{
-  background-color: #a0faff;
+  background-color: #b9f9fc;
   font-size: 50px;
   font-weight: bold;
   width: 100vw;
@@ -74,5 +74,5 @@
 .img{
   height: 9vh;
   width: 9vw;
-  border: solid 1px black;
+  border: solid 1px #616161;
 }

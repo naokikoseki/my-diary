@@ -6,6 +6,8 @@
   font-size: 25px;
   font-weight: bolder;
   margin-bottom: 1.5vh;
+  border-top: solid 3px #616161;
+  border-bottom: solid 3px #616161;
 }
 .show-title{
   font-family: 'Noto Serif JP', sans-serif;
@@ -15,7 +17,7 @@
   text-align: left;
   margin: 0.5vh 1.5vw;
   padding: 5px;
-  box-shadow: 0 20px 40px rgb(201, 201, 201);
+  box-shadow: 0 10px 15px rgb(201, 201, 201);
 }
 .show-image{
   flex-wrap: wrap;
@@ -29,9 +31,9 @@
   width: 70vw;
   height: 40vh;
   padding: 5px;
-  margin: 2.5vh;
+  margin: 3vh;
   text-align: left;
-  box-shadow: 0 20px 40px rgb(199, 199, 199);
+  box-shadow: 0 10px 15px rgb(199, 199, 199);
 }
 
 .diary-show-footer{
