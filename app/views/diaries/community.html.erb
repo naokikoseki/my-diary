@@ -4,21 +4,22 @@
   <p class="top-page-header">My Diary</p>
    <ul class='header-lists'>
      <% if user_signed_in? %>
-      <li class="user-nickname"><%= current_user.nickname %></li> 
+      <li><%= link_to current_user.nickname, root_path, class:"user-nickname"%></li>
       <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <%#<li class="chat-btn">chat room</li>%>
-      <li><%= link_to 'my page', root_path, class:"community-btn"%></li>
+      <li><%#= link_to 'my page', root_path, class:"community-btn"%></li>
       <li><%= link_to 'new diary', new_diary_path, class:"create-btn" %></li>
      <% end %>
     </ul>
  </header>
 
- <div class="community-main">
-  <%= form_with(url:  search_diaries_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-  <% end %>
+ 
+ <%= form_with(url:  search_diaries_path, local: true, method: :get, class: "search-form") do |form| %>
+ <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+ <%= form.submit "検索", class: "search-btn" %>
+ <% end %>
 
+ <div class="community-main">
   <ul class="diary-lists">
    <%# 公開されている日記の一覧表示 %>
    <% @diaries.each do |diary| %>
