@@ -46,7 +46,7 @@ class DiariesController < ApplicationController
   end
 
   def search
-    @diaries = Diary.search(params[:keyword])
+    @diaries = Diary.search(params[:keyword]).order("start_time DESC")
   end
 
   private

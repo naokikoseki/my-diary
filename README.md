@@ -22,3 +22,47 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+| Column           | Type        | Options    |
+|---------------------------------------------|
+| nickname         | string      |null: false |
+| email            | string      |null: false |
+| password         | string      |null: false |
+
+### Association
+-has_many :diaries
+-has_many :comments
+-has_many :anniversaries
+
+## diariesテーブル
+| Column          | Type        | Options                      |
+|--------------------------------------------------------------|
+| title           | string      |null: false                   |
+| content         | text        |null: false                   |
+| open            | integer     |                              |
+| start_time      | date        |null: false                   |
+| user_id         | integer     |null: false,foreign_key: true |
+
+### Association
+-belongs_to :user
+
+## commentsテーブル
+| Column   | Type    | Options                      |
+|---------------------------------------------------|
+| comment  | text    |                              |
+| diary_id | integer |null: false,foreign_key: true |
+| user_id  | integer |null: false,foreign_key: true |
+
+### Association
+-belongs_to :user
+-belongs_to :diary
+
+## anniversariesテーブル
+| Column       | Type    | Options                      |
+|-------------------------------------------------------|
+| anniversary  | date    |null: false                   |
+| name         | string  |null: false                   |
+| user_id      | integer |null: false,foreign_key: true |
+
+-belongs_to :user
