@@ -23,6 +23,18 @@
   flex-wrap: wrap;
   text-align: center;
 }
+input:checked+.img {
+  opacity: 5;
+}
+.diary-show-main .show-image {
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+  }
+.diary-show-main .show-image:hover {
+   -webkit-transform: rotate(1deg) scale(1.5);
+   transform: rotate(1deg) scale(1.5);
+  }
+
 .show-text{
   font-family: 'Noto Serif JP', sans-serif;
   border: solid 1px #616161;
