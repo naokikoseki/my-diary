@@ -36,18 +36,16 @@
  </div>
 
  <footer class="diary-show-footer">
-  <%= form_with(model:@comment, url: diary_comments_path, local: true) do |f| %>
-      <%= f.text_area :comment, placeholder: 'コメント', class:"comment-form" %>
+  <%= form_with(model: [@diary, @comment], url: diary_comments_path(@diary), local: true) do |f| %>
+      <%= f.text_area :text, placeholder: 'コメント', class:"comment-form", id:"comment_text" %>
       <%= f.submit '送信', class:"submit-bottun"%>
   <% end %>
   <div class="comments", id ="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-          </p>
+        <% @comments.reverse_each do |comment| %>
+         <p><%= comment.text %></p>
+         <%= comment.user.nickname %>
         <% end %>
       <% end %>
     </div>

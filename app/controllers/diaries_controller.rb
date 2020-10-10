@@ -20,7 +20,7 @@ class DiariesController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = Comment.all
+    @comments = @diary.comments.includes(:user)
   end
 
   def edit
