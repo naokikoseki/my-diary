@@ -103,16 +103,6 @@ input:checked+.img {
   padding: 5px;
   resize: none;
 }
-.comment-bottun{
-  text-decoration: none;
-  border-radius: 100vh;
-  background-color: papayawhip;
-  border: 2px solid wheat;
-  color: #616161;
-  padding: 0.3vh 1vw;
-  margin-bottom: 2vh;
-  box-shadow: 0 3px 3px wheat;
-}
 /* コメント表示部分 */
 .comments-content{
   font-family: 'Noto Serif JP', sans-serif;

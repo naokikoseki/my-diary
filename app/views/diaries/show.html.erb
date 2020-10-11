@@ -39,7 +39,7 @@
    <div class="comment-form">
     <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
       <%= f.text_area :text, placeholder: 'コメント', class:"comment-send", id:"comment-send" %>
-      <%= f.submit '送信', class:"comment-bottun", id:"comment-submit" %>
+      <%= f.submit '送信', class:"submit-bottun", id:"comment-submit" %>
     <% end %>
    </div>
    <div class="comments-content">
