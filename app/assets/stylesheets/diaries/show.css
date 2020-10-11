@@ -19,11 +19,11 @@
 /* 日付 */
 .show-date{
   margin-top: 3vh;
-  width: 70vw;
+  width: 60vw;
   position: relative;
   font-size: 25px;
   font-weight: bolder;
-  margin-left: 15vw;
+  margin: 2vh 20vw;
   position: relative;
   padding: 0.25em 1em;
   border-top: solid 2px black;
@@ -118,6 +118,9 @@ input:checked+.img {
   display: flex;
   justify-content: space-around;
   margin: 1vh;
+}
+.comment-error{
+  margin: 3vh 5vw 3vh 0;
 }
 /* SNS共有ボタン */
 .sns{

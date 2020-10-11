@@ -2,17 +2,19 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
   text-align: center;
   height: 100vh;
+  width: 100vw;
 }
 
 .header{
   font-size: 50px;
   font-weight: bold;
-  background-color: #a0faff;
+  background: linear-gradient(to right, rgb(160, 253, 244) 0%,rgba(131, 236, 248, 0.679) 30%,rgba(67, 154, 235, 0.337) 100%);/* グラデーション指定 */
   height: 10vh;
 }
 .user-main{
-  background-image: url(../sample6.jpeg);
   height: 90vh;
+  background-color: rgb(250, 245, 234);
+  overflow-y: scroll;
 }
 .login-title{
   font-size: 40px;
@@ -42,12 +44,6 @@
 .login-actions{
   margin: 5vh;
 }
-.login-btn{
-  border-radius: 100vh;
-  padding: 5px 10px;
-  border: solid 1px #a0faff;
-  background-color: #a0faff;
-}
-.footer{
-  height: 20vh;
+.devise-links{
+  margin-bottom: 5vh;
 }

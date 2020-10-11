@@ -4,8 +4,10 @@
  </header>
  
  <div class="show-main">
+ 
+  <%# 日記詳細 %>
    <div class="show-date">
-    <h2><%= @diary.start_time %>の日記</h2>  <%#仮のタイトル%>
+    <h2><%= @diary.start_time %>の日記</h2> 
      </div>
     <div class="show-image">
      <% if @diary.images.present? %>
@@ -24,9 +26,10 @@
    <div class="show-text">
     <%= @diary.content %>
    </div>
+  <%# 日記詳細 %>
 
    <div class="show-bottun">
-    <% if current_user.id == @diary.user.id%>
+    <% if user_signed_in? && (current_user.id == @diary.user.id) %>
      <%= link_to '編集', edit_diary_path, method: :get, class: "bottun" %>
      <%= link_to '削除', diary_path(@diary.id), method: :delete, class:"bottun" %>
      <%= link_to 'トップページに戻る', 'javascript:history.back()', class:"bottun" %>
@@ -36,10 +39,17 @@
    </div>
 
   <footer class="show-footer">
+
+   <%# コメント欄 %>
+   <% if @diary.open == "1"%> <%# 公開設定しているものにのみコメント欄が現れる %>
    <div class="comment-form">
-    <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
+    <% if current_user %>
+     <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
       <%= f.text_area :text, placeholder: 'コメント', class:"comment-send", id:"comment-send" %>
       <%= f.submit '送信', class:"submit-bottun", id:"comment-submit" %>
+     <% end %>
+    <% else %>
+     <p class="comment-error">ログインしているユーザーのみコメントができます</p>
     <% end %>
    </div>
    <div class="comments-content">
@@ -54,6 +64,8 @@
       <% end %>
      <% end %>
    </div>
+   <% end %><%# 公開設定しているものにのみコメント欄が現れる %>
+   <%# コメント欄 %>
 
    <div class="sns">
     <%= link_to 'Twitter','https://twitter.com/share?url=#{request.url}', class:"sns-t" %>

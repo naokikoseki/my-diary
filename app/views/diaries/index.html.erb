@@ -1,13 +1,12 @@
-<% if user_signed_in? %>
 <div class="diary-contents">
  <header class="diary-header">
   <h1 class="top-page-header">My Diary</h1>
    <ul class='header-lists'>
       <li class="user-nickname", id="header-lists"><%= current_user.nickname %></li> 
-      <li><%= link_to 'log out', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <%#<li class="chat-btn">chat room</li>%>
-      <li><%= link_to 'community', 'diaries/community', class:"community-btn"%></li>
-      <li><%= link_to 'new diary', new_diary_path, class:"create-btn", id:"create-btn" %></li>
+      <li><%= link_to 'コミュニティ', 'diaries/community', class:"community-btn"%></li>
+      <li><%= link_to '新規作成', new_diary_path, class:"create-btn", id:"create-btn" %></li>
     </ul>
  </header>
 
@@ -48,4 +47,3 @@
   <%# カレンダーの表示 %>
  </div>
 </div>
-<% end %>
