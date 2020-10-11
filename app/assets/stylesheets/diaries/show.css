@@ -1,7 +1,6 @@
 .diary-show-contents{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   display: flex;
-  position: absolute;
   background-color: rgb(250, 245, 234);
   align-items: center;
   flex-direction: column;
@@ -11,11 +10,10 @@
 }
 
 .diary-show-main{
-  height: 77vh;
+  height: 70vh;
   padding-top: 2vh;
 }
 .diary-show-title{
-  position: relative;
   width: 70vw;
   font-size: 25px;
   font-weight: bolder;
@@ -56,27 +54,47 @@ input:checked+.img {
   border-radius: 1vh;
   background-color: whitesmoke;
   width: 70vw;
-  height: 40vh;
+  height: 35vh;
   padding: 5px;
   margin: 3vh 0;
   text-align: left;
   box-shadow: 0 10px 15px rgb(199, 199, 199);
 }
-
+.diary-show-footer{
+  height: 25vh;
+  margin-bottom: 7vh;
+}
+.comments-content{
+  font-family: 'Noto Serif JP', sans-serif;
+  width: 25vw;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 1vh;
+  padding: 3px;
+}
+.comments{
+  display: flex;
+  justify-content: space-between;
+}
 .comment-form{
   font-family: 'Noto Serif JP', sans-serif;
-  background-color: whitesmoke;
+  background-color: white;
   border: solid 1px rgb(206, 206, 206);
   border-radius: 1vh;
   width: 25vw;
   height: 5vh;
   padding: 5px;
   resize: none;
-  box-shadow: 0 15px 30px rgb(201, 201, 201);
 }
-
-.diary-show-footer{
-  height: 15vh;
+.comment-bottun{
+  text-decoration: none;
+  border-radius: 100vh;
+  background-color: papayawhip;
+  border: 2px solid wheat;
+  color: #616161;
+  padding: 0.3vh 1vw;
+  margin-bottom: 2vh;
+  box-shadow: 0 3px 3px wheat;
 }
 .sns{
   margin-top: 2vh;

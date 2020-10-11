@@ -20,7 +20,7 @@ class DiariesController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @diary.comments.includes(:user)
+    @comments = @diary.comments.order("created_at ASC")
   end
 
   def edit

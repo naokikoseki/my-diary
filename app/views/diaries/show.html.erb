@@ -32,28 +32,28 @@
      <%= link_to '一覧に戻る', 'javascript:history.back()', class:"bottun" %>
     <% end %>
    </div>
-
  </div>
 
  <footer class="diary-show-footer">
-  <%= form_with(model: [@diary, @comment], url: diary_comments_path(@diary), local: true) do |f| %>
-      <%= f.text_area :text, placeholder: 'コメント', class:"comment-form", id:"comment_text" %>
-      <%= f.submit '送信', class:"submit-bottun"%>
+  <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
+      <%= f.text_area :text, placeholder: 'コメント', class:"comment-form", id:"comment-form" %>
+      <%= f.submit '送信', class:"comment-bottun", id:"comment-submit" %>
   <% end %>
-  <div class="comments", id ="comments">
-      <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.reverse_each do |comment| %>
-         <p><%= comment.text %></p>
-         <%= comment.user.nickname %>
-        <% end %>
+  <div class="comments-content">
+   <h4 id="comments">＜コメント一覧＞</h4>
+     <% if @comments %>
+      <% @comments.reverse_each do |comment| %>
+        <div class="comments">
+         <div class="comment-text"><%= comment.text %></div>
+         <div class="comment-user"><%= comment.user.nickname %></div>
+        </div>
       <% end %>
-    </div>
+     <% end %>
+  </div>
 
   <div class="sns">
    <%= link_to 'Twitter','https://twitter.com/share?url=#{request.url}', class:"sns-t" %>
    <%= link_to 'LINE', 'https://line.me/R/msg/text/?#{request.url}', class:"sns-l" %>
   </div>
  </footer>
- 
 </div>
