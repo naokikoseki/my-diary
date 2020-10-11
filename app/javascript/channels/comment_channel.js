@@ -14,9 +14,10 @@ consumer.subscriptions.create("CommentChannel", {
       <div class="comments">
        <div class="comment-text">${data.content.text}</div>
        <div class="comment-user">${data.content.nickname}</div>
+       <div class="comment-time">${data.content.created_at}</div>
       </div>`;
     const comments = document.getElementById('comments');
-    const newComment = document.getElementById('comment-form');
+    const newComment = document.getElementById('comment-send');
     const submit = document.getElementById('comment-submit')
     comments.insertAdjacentHTML("afterend", HTML);
     newComment.value='';

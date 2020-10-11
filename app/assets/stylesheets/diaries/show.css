@@ -2,39 +2,51 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
   display: flex;
   background-color: rgb(250, 245, 234);
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
   text-align: center;
-  overflow-y: scroll;
 }
 
-.diary-show-main{
-  height: 70vh;
-  padding-top: 2vh;
+/* 日記の詳細 */
+.show-main{
+  height: 90vh;
+  width: 100vw;
+  overflow-y: scroll;
 }
-.diary-show-title{
+/* 日付 */
+.show-date{
+  margin-top: 3vh;
   width: 70vw;
+  position: relative;
   font-size: 25px;
   font-weight: bolder;
-  margin-bottom: 1.5vh;
-  border-top: solid 3px #616161;
-  border-bottom: solid 3px #616161;
+  margin-left: 15vw;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
 }
-.show-title{
-  width: 70vw;
-  font-family: 'Noto Serif JP', sans-serif;
-  border: solid 1px #616161;
-  border-radius: 1vh;
-  background-color: whitesmoke;
-  text-align: left;
-  margin-top: 0.5vh;
-  padding: 5px;
-  box-shadow: 0 10px 15px rgb(201, 201, 201);
+.show-date:before, .show-date:after {
+  content: '';
+  position: absolute;
+  top: -1vh;
+  width: 2px;
+  height: -webkit-calc(100% + 2vh);
+  height: calc(100% + 2vh);
+  background-color: black;
 }
+.show-date:before {
+  left: 1vh;
+}
+.show-date:after {
+  right: 1vh;
+} 
+/* 画像 */
 .show-image{
-  flex-wrap: wrap;
-  text-align: center;
+  margin-top: 2vh;
 }
 input:checked+.img {
   opacity: 5;
@@ -47,7 +59,19 @@ input:checked+.img {
    -webkit-transform: rotate(1deg) scale(1.5);
    transform: rotate(1deg) scale(1.5);
   }
-
+/* 日記のタイトル */
+.show-title{
+  width: 70vw;
+  font-family: 'Noto Serif JP', sans-serif;
+  border: solid 1px #616161;
+  border-radius: 1vh;
+  background-color: whitesmoke;
+  text-align: left;
+  margin: 0.5vh 0 0 15vw;
+  padding: 5px;
+  box-shadow: 0 10px 15px rgb(201, 201, 201);
+}
+/* 日記の本文 */
 .show-text{
   font-family: 'Noto Serif JP', sans-serif;
   border: solid 1px #616161;
@@ -56,27 +80,20 @@ input:checked+.img {
   width: 70vw;
   height: 35vh;
   padding: 5px;
-  margin: 3vh 0;
+  margin: 3vh 15vw;
   text-align: left;
   box-shadow: 0 10px 15px rgb(199, 199, 199);
 }
-.diary-show-footer{
-  height: 25vh;
-  margin-bottom: 7vh;
+/*フッター部分*/
+.show-footer{
+  width: 70vw;
+  margin-left: 15vw;
 }
-.comments-content{
-  font-family: 'Noto Serif JP', sans-serif;
-  width: 25vw;
-  background-color: white;
-  border: solid 1px black;
-  border-radius: 1vh;
-  padding: 3px;
-}
-.comments{
-  display: flex;
-  justify-content: space-between;
-}
+/* コメント送信フォーム */
 .comment-form{
+  margin: 4vh 0 0 6vw;
+}
+.comment-send{
   font-family: 'Noto Serif JP', sans-serif;
   background-color: white;
   border: solid 1px rgb(206, 206, 206);
@@ -96,8 +113,25 @@ input:checked+.img {
   margin-bottom: 2vh;
   box-shadow: 0 3px 3px wheat;
 }
+/* コメント表示部分 */
+.comments-content{
+  font-family: 'Noto Serif JP', sans-serif;
+  width: 25vw;
+  background-color: rgb(250, 245, 234);
+  margin-left: 22.5vw;
+}
+.comments-title{
+  border-bottom: solid 4px rgba(76, 175, 80, 0.6);        /* 線指定 */
+  border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
+}
+.comments{
+  display: flex;
+  justify-content: space-around;
+  margin: 1vh;
+}
+/* SNS共有ボタン */
 .sns{
-  margin-top: 2vh;
+  margin: 5vh 0;
 }
 .sns-t{
   text-decoration: none;

@@ -9,7 +9,7 @@
   height: 10vh;
 }
 .top-page-header{
-  background-color: #b9f9fc;
+  background: linear-gradient(to right, rgb(160, 253, 244) 0%,rgba(131, 236, 248, 0.679) 30%,rgba(67, 154, 235, 0.337) 100%);/* グラデーション指定 */
   font-size: 50px;
   font-weight: bold;
   width: 100vw;

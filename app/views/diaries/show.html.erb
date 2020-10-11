@@ -3,8 +3,10 @@
   <h1 class="top-page-header">My Diary</h1>
  </header>
  
- <div class="diary-show-main">
-   <p class="diary-show-title"><%= @diary.start_time %>の日記</p> <%#仮のタイトル%>
+ <div class="show-main">
+   <div class="show-date">
+    <h2><%= @diary.start_time %>の日記</h2>  <%#仮のタイトル%>
+     </div>
     <div class="show-image">
      <% if @diary.images.present? %>
 
@@ -32,28 +34,31 @@
      <%= link_to '一覧に戻る', 'javascript:history.back()', class:"bottun" %>
     <% end %>
    </div>
- </div>
 
- <footer class="diary-show-footer">
-  <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
-      <%= f.text_area :text, placeholder: 'コメント', class:"comment-form", id:"comment-form" %>
+  <footer class="show-footer">
+   <div class="comment-form">
+    <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>
+      <%= f.text_area :text, placeholder: 'コメント', class:"comment-send", id:"comment-send" %>
       <%= f.submit '送信', class:"comment-bottun", id:"comment-submit" %>
-  <% end %>
-  <div class="comments-content">
-   <h4 id="comments">＜コメント一覧＞</h4>
+    <% end %>
+   </div>
+   <div class="comments-content">
+    <h3 class="comments-title", id="comments">コメント一覧</h3>
      <% if @comments %>
       <% @comments.reverse_each do |comment| %>
         <div class="comments">
          <div class="comment-text"><%= comment.text %></div>
          <div class="comment-user"><%= comment.user.nickname %></div>
+         <div class="comment-time"><%= comment.created_at %></div>
         </div>
       <% end %>
      <% end %>
-  </div>
+   </div>
 
-  <div class="sns">
-   <%= link_to 'Twitter','https://twitter.com/share?url=#{request.url}', class:"sns-t" %>
-   <%= link_to 'LINE', 'https://line.me/R/msg/text/?#{request.url}', class:"sns-l" %>
-  </div>
- </footer>
+   <div class="sns">
+    <%= link_to 'Twitter','https://twitter.com/share?url=#{request.url}', class:"sns-t" %>
+    <%= link_to 'LINE', 'https://line.me/R/msg/text/?#{request.url}', class:"sns-l" %>
+   </div>
+  </footer>
+ </div>
 </div>
