@@ -9,16 +9,20 @@
   height: 10vh;
 }
 .top-page-header{
-  background-color: #b9f9fc;
+  background: linear-gradient(to right, rgb(160, 253, 244) 0%,rgba(131, 236, 248, 0.679) 30%,rgba(67, 154, 235, 0.337) 100%);/* グラデーション指定 */
   font-size: 50px;
   font-weight: bold;
   width: 100vw;
   text-align: center;
+  animation-name:     my-fade-in;
+  animation-duration: 1s;
 }
 
 .header-lists{
   display: flex;
   padding: 0 10px;
+  animation-name:     my-fade-in;
+  animation-duration: 1s;
 }
 .user-nickname{
   text-decoration: none;
@@ -56,6 +60,8 @@
   margin-top: 3vh;
   height: 87vh;
   overflow-y: scroll;
+  animation-name:     my-fade-in;
+  animation-duration: 2s;
 }
 .calendar-heading{
   text-align: center;
@@ -76,3 +82,15 @@
   width: 9vw;
   border: solid 1px #616161;
 }
+
+input:checked+.img {
+  opacity: 5;
+}
+.main .img {
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+  }
+.main .img:hover {
+   -webkit-transform: rotate(1deg) scale(1.2);
+   transform: rotate(1deg) scale(1.2);
+  }

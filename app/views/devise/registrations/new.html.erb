@@ -2,14 +2,17 @@
  <header class="header">Welcome to My Diary </header>
 
  <div class="user-main">
-  <h2 class="signup-title">Sign up</h2>
+  <h2 class="signup-title">新規登録フォーム</h2>
  
   <%= form_with model:@user, url: user_registration_path, local: true do |f| %>
-   <%= render "devise/shared/error_messages", resource: resource %>
+
+   <%# エラーメッセージ %>
+   <%= render 'devise/shared/error_messages', model: f.object %>
+   <%# エラーメッセージ %>
 
    <div class="nickname">
    <%= f.label :nickname, class:"form-name" %><br />
-   <%= f.text_area :nickname, class:"nickname-form"%>
+   <%= f.text_area :nickname, placeholder:"20文字以内", class:"nickname-form"%>
    </div>
 
    <div class="email-login">
@@ -22,18 +25,20 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"login-form" %>
+    <%= f.password_field :password, placeholder:"6文字以上", autocomplete: "new-password", class:"login-form" %>
    </div>
 
    <div class="password-login">
     <%= f.label :password_confirmation, class:"form-name" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"login-form" %>
+    <%= f.password_field :password_confirmation, placeholder:"上と同じものを記入してください", autocomplete: "new-password", class:"login-form" %>
    </div>
 
    <div class="signup-actions">
-    <%= f.submit "Sign up", class:"login-btn" %>
+    <%= f.submit "Sign up", class:"bottun" %>
    </div>
   <% end %>
-  <%= render "devise/shared/links" %>
+  <div class="devise-links">
+   <%= render "devise/shared/links" %>
+  </div>
  </div>
 </div>

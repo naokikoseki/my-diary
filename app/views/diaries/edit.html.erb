@@ -1,5 +1,4 @@
-<% if current_user.id == @diary.user_id %>
- <div class="diary-create-contents">
+<div class="diary-create-contents">
   <header class="diary-create-header">
    <h1 class="top-page-header">My Diary</h1>
   </header>
@@ -7,7 +6,9 @@
   <div class="diary-create-main">
     <%= form_with(model:@diary, local: true) do |f|%>
    
-     <%#エラーメッセージを入れる%>
+     <%# エラーメッセージ %>
+     <%= render 'devise/shared/error_messages', model: f.object %>
+     <%# エラーメッセージ %>
 
      <div class="img-upload">
       <div class="click-upload">
@@ -37,7 +38,4 @@
      </div>
     <% end %>
   </div>
- </div>
-<% else %>
- <%= link_to 'トップページへ', root_path, method: :get, class:"bottun" %>
-<% end %>
+</div>

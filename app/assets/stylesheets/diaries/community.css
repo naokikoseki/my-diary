@@ -10,14 +10,40 @@
   flex-wrap: wrap;
   justify-content: left;
 }
+
+@keyframes my-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.list {  
+  /* .listが「my-fade-in」で状態変化するように指定 */
+  animation-name:     my-fade-in;
+  animation-duration: 3s;
+}
 .list{
   height: 27vh;
   margin: 2vh 2.3vw;
   text-align: center;
+  background-color: aliceblue;
   box-shadow: 0 20px 40px rgb(92, 92, 92);
 }
+input:checked+.list {
+  opacity: 5;
+}
+.diary-lists .list {
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+  }
+.diary-lists .list:hover {
+   -webkit-transform: rotate(1deg) scale(1.2);
+   transform: rotate(1deg) scale(1.2);
+  }
 .community-image{
   height: 15vh;
   width: 15vw;
-  box-shadow: 0 20px 40px wheat;
 }

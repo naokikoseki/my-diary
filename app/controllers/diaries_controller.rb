@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :move_to_community, except: [:community, :show]
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   
   def new
@@ -19,9 +20,19 @@ class DiariesController < ApplicationController
   end
 
   def show
+    if not(user_signed_in?) && @diary.open == "0"
+      redirect_to action: :community
+    elsif @diary.open == "0" && not(current_user.id == @diary.user.id)
+      redirect_to action: :community
+    end
+    @comment = Comment.new
+    @comments = @diary.comments.order("created_at ASC")
   end
 
   def edit
+    unless current_user.id == @diary.user.id
+      redirect_to action: :community
+    end
   end
 
   def update
@@ -52,6 +63,12 @@ class DiariesController < ApplicationController
   private
   def diary_params
     params.require(:diary).permit(:title, :content, :start_time, :open, images: []).merge(user_id: current_user.id)
+  end
+
+  def move_to_community
+    unless user_signed_in?
+      redirect_to action: :community
+    end
   end
 
   def set_diary
