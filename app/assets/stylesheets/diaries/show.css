@@ -106,16 +106,19 @@ input:checked+.img {
 /* コメント表示部分 */
 .comments-content{
   font-family: 'Noto Serif JP', sans-serif;
-  width: 25vw;
+  width: 40vw;
   background-color: rgb(250, 245, 234);
-  margin-left: 22.5vw;
+  margin-left: 17.5vw;
 }
 .comments-title{
+  width: 22.5vw;
+  margin-left: 7vw;
   border-bottom: solid 4px rgba(76, 175, 80, 0.6);        /* 線指定 */
   border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
 }
 .comments{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 1vh;
 }

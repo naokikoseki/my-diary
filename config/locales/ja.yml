@@ -8,3 +8,6 @@ ja:
        text: テキスト
        image: 画像
        content: 文章
+     time:
+       formats:
+         default: "%Y/%m/%d %H:%M:%S"
