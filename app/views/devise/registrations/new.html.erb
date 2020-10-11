@@ -12,7 +12,7 @@
 
    <div class="nickname">
    <%= f.label :nickname, class:"form-name" %><br />
-   <%= f.text_area :nickname, class:"nickname-form"%>
+   <%= f.text_area :nickname, placeholder:"20文字以内", class:"nickname-form"%>
    </div>
 
    <div class="email-login">
@@ -25,12 +25,12 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"login-form" %>
+    <%= f.password_field :password, placeholder:"6文字以上", autocomplete: "new-password", class:"login-form" %>
    </div>
 
    <div class="password-login">
     <%= f.label :password_confirmation, class:"form-name" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"login-form" %>
+    <%= f.password_field :password_confirmation, placeholder:"上と同じものを記入", autocomplete: "new-password", class:"login-form" %>
    </div>
 
    <div class="signup-actions">
