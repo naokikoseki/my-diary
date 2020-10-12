@@ -28,10 +28,10 @@ Things you may want to cover:
     公開/非公開を問わず、TwitterやLINEへの共有も可能。
 * URL:http://54.199.89.104/
 * テスト用アカウント
-   email:sample@sample.com
+   email:sample@sample.com,
    password:sample1234
 * Basic認証
-   ID:admin
+   ID:admin,
    password:2222
 
 ## usersテーブル
