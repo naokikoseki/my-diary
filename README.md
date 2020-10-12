@@ -42,9 +42,9 @@ Things you may want to cover:
 | password         | string      |null: false |
 
 ### Association
--has_many :diaries
--has_many :comments
--has_many :anniversaries
+- has_many :diaries
+- has_many :comments
+- has_many :anniversaries
 
 ## diariesテーブル
 | Column          | Type        | Options                      |
@@ -56,8 +56,8 @@ Things you may want to cover:
 | user_id         | integer     |null: false,foreign_key: true |
 
 ### Association
--belongs_to :user
--has_many :comments
+- belongs_to :user
+- has_many :comments
 
 ## commentsテーブル
 | Column   | Type    | Options                      |
@@ -67,8 +67,8 @@ Things you may want to cover:
 | user_id  | integer |null: false,foreign_key: true |
 
 ### Association
--belongs_to :user
--belongs_to :diary
+- belongs_to :user
+- belongs_to :diary
 
 ## anniversariesテーブル
 | Column       | Type    | Options                      |
@@ -77,4 +77,4 @@ Things you may want to cover:
 | name         | string  |null: false                   |
 | user_id      | integer |null: false,foreign_key: true |
 
--belongs_to :user
+- belongs_to :user
