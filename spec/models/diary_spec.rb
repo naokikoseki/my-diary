@@ -47,6 +47,12 @@ RSpec.describe Diary, type: :model do
        @diary.valid?
        expect(@diary.errors.full_messages)
      end
+
+     it "userが紐づいていなければ日記が保存できない" do
+       @diary.user = nil
+       @diary.valid?
+       expect(@diary.errors.full_messages)
+     end
    end
   end
 end
