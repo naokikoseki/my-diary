@@ -82,7 +82,7 @@ ruby 2.6.5
 |-----------------|-------------|------------------------------|
 | title           | string      |null: false                   |
 | content         | text        |null: false                   |
-| open            | integer     |                              |
+| open            | integer     |null: false                   |
 | start_time      | date        |null: false                   |
 | user_id         | integer     |null: false,foreign_key: true |
 
@@ -93,7 +93,7 @@ ruby 2.6.5
 ## commentsテーブル
 | Column   | Type    | Options                      |
 |----------|---------|------------------------------|
-| comment  | text    |                              |
+| comment  | text    |null: false                   |
 | diary_id | integer |null: false,foreign_key: true |
 | user_id  | integer |null: false,foreign_key: true |
 
