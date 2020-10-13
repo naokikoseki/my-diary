@@ -63,7 +63,7 @@ ruby 2.6.5
 * ニュース閲覧機能:スクレーピングによりYahoo!ニュースの閲覧を可能にする。
 
 ### データベース設計:
-![ER図]('public/image/my-diary-ER.png)
+'public/image/my-diary-ER.png’
 
 ## usersテーブル
 | Column           | Type        | Options    |
