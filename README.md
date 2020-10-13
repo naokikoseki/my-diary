@@ -63,6 +63,8 @@ ruby 2.6.5
 * ニュース閲覧機能:スクレーピングによりYahoo!ニュースの閲覧を可能にする。
 
 ### データベース設計:
+![ER図]('public/image/my-diary-ER.png)
+
 ## usersテーブル
 | Column           | Type        | Options    |
 |------------------|-------------|------------|
@@ -102,7 +104,7 @@ ruby 2.6.5
 ## anniversariesテーブル
 | Column       | Type    | Options                      |
 |--------------|---------|------------------------------|
-| anniversary  | date    |null: false                   |
+| date         | date    |null: false                   |
 | name         | string  |null: false                   |
 | user_id      | integer |null: false,foreign_key: true |
 
