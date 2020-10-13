@@ -3,20 +3,6 @@
 * Ruby version
 ruby 2.6.5
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
 ### 概要:
 * 日記を作成し、マイページに表示されるカレンダーで過去のものを振り返ることができる。
 * また、作成の際に公開/非公開が選択でき、公開されたものはコミュニティから閲覧することができる。
@@ -45,7 +31,6 @@ ruby 2.6.5
 * 既存の日記アプリやSNSを利用する際に、他者に見せないもの/他者と共有したいものをそれぞれ別のアプリケーションを利用する必要がある。
   そのデータの管理を一括にして、アプリケーションを切り替える手間を無くすことが本アプリケーションの目的である。
 
-### 洗い出した要件:
 ### 実装した機能:
 * ユーザー管理機能
 * 一覧表示機能
