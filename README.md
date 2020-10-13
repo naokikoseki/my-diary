@@ -12,8 +12,8 @@ ruby 2.6.5
 * http://54.199.89.104/
 
 ### テスト用アカウント:
-* email:sample@sample.com
-* password:sample1234
+* email:naoki@example.com
+* password:naoki1234
 
 ### Basic認証:
 * ID:admin
