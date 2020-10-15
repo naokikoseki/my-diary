@@ -1,7 +1,11 @@
 # My Diary
 
-* Ruby version
-ruby 2.6.5
+### 開発環境
+* 使用言語：HTML, CSS, JavaScript, ruby 2.6.5
+* クラウド：AWS
+* 使用ツール:Github, Visual Studio Code 
+* OS:macOS Catalina
+* DB:mysql
 
 ### 概要:
 * 日記を作成し、マイページに表示されるカレンダーで過去のものを振り返ることができる。
