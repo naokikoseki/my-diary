@@ -65,6 +65,7 @@
 - has_many :diaries
 - has_many :comments
 - has_many :anniversaries
+- has_many :likes
 
 ## diariesテーブル
 | Column          | Type        | Options                      |
@@ -78,6 +79,7 @@
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_many :likes
 
 ## commentsテーブル
 | Column   | Type    | Options                      |
@@ -109,4 +111,5 @@
 
 
 - belongs_to :user
+- belongs_to :diary
 
