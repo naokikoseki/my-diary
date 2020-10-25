@@ -53,6 +53,7 @@ class DiariesController < ApplicationController
   end
 
   def community
+    @likes_count = Like.where(diary_id: @diary.id).count
     @diaries = Diary.all.order("start_time DESC")
     render 'community'
   end
