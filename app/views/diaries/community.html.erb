@@ -7,7 +7,7 @@
       <li class="user-nickname"><%= current_user.nickname %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <%#<li class="chat-btn">chat room</li>%>
-      <li><%= link_to 'マイページ', root_path, class:"community-btn"%></li>
+      <li><%= link_to 'マイページ', diaries_path, class:"community-btn"%></li>
       <li><%= link_to '新規作成', new_diary_path, class:"create-btn" %></li>
      <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class:"logout" %></li>
