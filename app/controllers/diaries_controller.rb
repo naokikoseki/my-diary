@@ -52,7 +52,6 @@ class DiariesController < ApplicationController
   end
 
   def community
-    @likes_count = Like.where(@diary).count
     @diaries = Diary.all.order("start_time DESC")
     render 'community'
   end
@@ -60,10 +59,10 @@ class DiariesController < ApplicationController
   def search
     @diaries = Diary.search(params[:keyword]).order("start_time DESC")
   end
-
+  
   private
   def diary_params
-    params.require(:diary).permit(:title, :content, :start_time, :open, images: []).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :content, :start_time, :opened, images: []).merge(user_id: current_user.id)
   end
 
   def move_to_community

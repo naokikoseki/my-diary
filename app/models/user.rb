@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :diaries
   has_many :comments
+  has_many :likes
 
   with_options presence: true do
     validates :nickname, length: {maximum: 20}

@@ -39,11 +39,12 @@
           </div>
          <% end %>
 
-         <div class="community-diary-info">
-          
-          <h1><%= diary.title %></h1>
-          <h2><%= diary.user.nickname %></h2>
-          <h3><%= diary.start_time %></h3>
+         <div class="community-diaries-info">
+          <div class="diary-info">
+           <h1><%= diary.title %></h1>
+           <h2><%= diary.user.nickname %></h2>
+           <h3><%= diary.start_time %></h3>
+          </div>
          </div>
        </li>
      <% end %>
@@ -58,11 +59,13 @@
           </div>
          <% end %>
 
-         <div class="community-diary-info">
-          <h1><%= diary.title %></h1>
-          <h2><%= diary.user.nickname %></h2>
-          <h3><%= diary.start_time %></h3>
-         </div>
+          <div class="community-diaries-info">
+           <div class="diary-info">
+            <h1><%= diary.title %></h1>
+            <h2><%= diary.user.nickname %></h2>
+            <h3><%= diary.start_time %></h3>
+           </div>
+          </div>
        </li>
     <% end %>
     <%# 画像の有無の条件分岐 %>
