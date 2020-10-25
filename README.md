@@ -67,3 +67,9 @@ Things you may want to cover:
 | user_id      | integer |null: false,foreign_key: true |
 
 -belongs_to :user
+
+## likesテーブル
+| Column       | Type    | Options                      |
+|-------------------------------------------------------|
+| diary_id     | integer |null: false,foreign_key: true |
+| user_id      | integer |null: false,foreign_key: true |
