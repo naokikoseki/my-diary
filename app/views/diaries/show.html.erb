@@ -41,7 +41,7 @@
   <footer class="show-footer">
 
    <%# コメント欄 %>
-   <% if @diary.open == "1"%> <%# 公開設定しているものにのみコメント欄が現れる %>
+   <% if @diary.opened == "1"%> <%# 公開設定しているものにのみコメント欄が現れる %>
    <div class="comment-form">
     <% if current_user %>
      <%= form_with(model: @comment, url: diary_comments_path(@diary), local: true) do |f| %>

@@ -27,7 +27,7 @@
    <%# 公開されている日記の一覧表示 %>
    <% @diaries.each do |diary| %>
     <%# 画像の有無の条件分岐 %>
-    <% if (diary.open == "1") && diary.images.present? %>
+    <% if (diary.opened == "1") && diary.images.present? %>
 
      <%# 保存されている画像の一枚表示 %>
      <% diary.images.first(1).each do |image| %>
@@ -40,6 +40,7 @@
          <% end %>
 
          <div class="community-diary-info">
+          
           <h1><%= diary.title %></h1>
           <h2><%= diary.user.nickname %></h2>
           <h3><%= diary.start_time %></h3>
@@ -48,7 +49,7 @@
      <% end %>
      <%# 保存されている画像の一枚表示 %>
      
-    <% elsif (diary.open == "1") && !(diary.images.present?) %>
+    <% elsif (diary.opened == "1") && !(diary.images.present?) %>
        <li class="list">
 
          <%= link_to diary_path(diary.id) do%>

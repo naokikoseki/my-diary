@@ -20,10 +20,9 @@ class DiariesController < ApplicationController
   end
 
   def show
-    @likes_count = Like.where(diary_id: @diary.id).count
-    if not(user_signed_in?) && @diary.open == "0"
+    if not(user_signed_in?) && @diary.opened == "0"
       redirect_to action: :community
-    elsif @diary.open == "0" && not(current_user.id == @diary.user.id)
+    elsif @diary.opened == "0" && not(current_user.id == @diary.user.id)
       redirect_to action: :community
     end
     @comment = Comment.new
@@ -53,7 +52,7 @@ class DiariesController < ApplicationController
   end
 
   def community
-    @likes_count = Like.where(diary_id: @diary.id).count
+    @likes_count = Like.where(@diary).count
     @diaries = Diary.all.order("start_time DESC")
     render 'community'
   end
